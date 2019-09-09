@@ -10,10 +10,24 @@
 #define Board_hpp
 
 #include <stdio.h>
+#include <SDL2/SDL.h>
+#include "Rectangle.hpp"
+
 class Board{
+private:
+    int width = 800;
+    int height = 600;
+    
+    SDL_Window *window;
+    SDL_Renderer *renderer;
+    
 public:
     Board();
     ~Board();
+    
+    void drawRectangle(Rectangle *rectangle);
+    void clear();
+    void present();
 };
 
 #endif /* Board_hpp */

@@ -10,9 +10,12 @@
 #define Game_hpp
 
 #include <stdio.h>
+#include "../views/Board.hpp"
+
 class Game{
 private:
-    bool isGameOver;
+    bool isRunning = true;
+    Board *board;
     
 public:
     Game();

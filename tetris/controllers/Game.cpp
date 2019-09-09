@@ -7,3 +7,23 @@
 //
 
 #include "Game.hpp"
+
+Game::Game(){
+    board = new Board();
+}
+
+void Game::start(){
+    SDL_Event e;
+    
+    while (isRunning){
+        while (SDL_PollEvent(&e)){
+            if (e.type == SDL_QUIT){
+                isRunning = false;
+            }
+        }
+    }
+}
+
+Game::~Game(){
+    
+}
